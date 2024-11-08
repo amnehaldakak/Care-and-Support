@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:supcar/ask.dart';
-import 'package:supcar/content/askcard.dart';
+import 'package:supcar/content/form.dart';
+import 'package:supcar/doctor/addpost.dart';
+import 'package:supcar/doctor/doctorhome.dart';
 import 'package:supcar/home.dart';
 import 'package:supcar/patient.dart';
 
@@ -16,11 +18,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
-      initialRoute: 'home',
+      home: Doctorhome(),
+      initialRoute: 'doctorhome',
       routes: {
         'home': (context) => Home(),
         'ask': (context) => Ask(),
+        'addpost': (context) => Addpost(),
+        'doctorhome': (context) => Doctorhome()
       },
     );
   }

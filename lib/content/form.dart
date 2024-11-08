@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:supcar/constent/color.dart';
 
-class Askcard extends StatelessWidget {
+class Form1 extends StatelessWidget {
   final String hint1;
   final String? Function(String?) valid;
   final TextEditingController mycontroller;
   final int max;
-  Askcard(
+  Form1(
       {super.key,
       required this.hint1,
       required this.mycontroller,

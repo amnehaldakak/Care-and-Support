@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:supcar/constent/color.dart';
 
-class Post1 extends StatelessWidget {
-  final String postDoc;
-
-  const Post1({super.key, required this.postDoc});
+class Post extends StatelessWidget {
+  Post({
+    super.key,
+    required this.messege,
+    required this.username,
+    required this.time,
+    required this.userImage,
+    this.image,
+  });
+  final String messege;
+  final String username;
+  final DateTime time;
+  final String userImage;
+  String? image;
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +23,13 @@ class Post1 extends StatelessWidget {
         alignment: Alignment.topRight,
         child: ListTile(
             trailing: CircleAvatar(
-              backgroundImage: AssetImage('image/PI.jpeg'),
+              backgroundImage: AssetImage(userImage),
               backgroundColor: Colors.grey,
             ),
             title: GestureDetector(
               onTap: () {},
               child: Text(
-                'username',
+                username,
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
@@ -31,7 +41,7 @@ class Post1 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  'date of post',
+                  time.toString(),
                   textAlign: TextAlign.right,
                 ),
                 Container(padding: EdgeInsets.all(5)),
@@ -44,45 +54,44 @@ class Post1 extends StatelessWidget {
       );
     }
 
+    buildPostFooter() {
+      return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        Container(
+          alignment: Alignment.topRight,
+          padding: EdgeInsets.all(5),
+          child: Text(
+            messege,
+            textAlign: TextAlign.justify,
+          ),
+        ),
+      ]);
+    }
+
     buildPostImage() {
       return GestureDetector(
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.network(
-              'https://th.bing.com/th?id=OIP.TQSxaEcMizUChr5Gz1dbYgHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2',
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.cover,
-            )
+            image != null
+                ? Image.network(
+                    image!,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  )
+                : Container()
           ],
         ),
       );
     }
 
-    buildPostFooter() {
-      return Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            postDoc,
-            textAlign: TextAlign.justify,
-          ),
-        )
-      ]);
-    }
-
     return Container(
-        padding: EdgeInsets.all(10),
-        child: Card(
-          color: blue1,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              buildPostHeader(),
-              buildPostFooter(),
-              buildPostImage(),
-            ],
-          ),
-        ));
+      child: Column(
+        children: [
+          buildPostHeader(),
+          buildPostFooter(),
+          buildPostImage(),
+        ],
+      ),
+    );
   }
 }

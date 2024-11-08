@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supcar/constent/color.dart';
-import 'package:supcar/content/askcard.dart';
+import 'package:supcar/content/form.dart';
 import 'package:supcar/content/valid.dart';
 
 class Ask extends StatefulWidget {
@@ -21,7 +21,7 @@ class _AskState extends State<Ask> {
         color: blue1,
         child: Column(
           children: [
-            Askcard(
+            Form1(
               max: 8,
               hint1: 'Write Your Consultation',
               mycontroller: content,
