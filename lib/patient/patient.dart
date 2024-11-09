@@ -3,8 +3,8 @@ import 'package:flutter_material_design_icons/flutter_material_design_icons.dart
 import 'package:flutter/material.dart';
 import 'package:supcar/content/customeappbar.dart';
 import 'package:supcar/content/post.dart';
-import 'package:supcar/doctorask.dart';
-import 'package:supcar/medicine.dart';
+import 'package:supcar/patient/doctorask.dart';
+import 'package:supcar/patient/medicine.dart';
 
 class Homepatient extends StatefulWidget {
   const Homepatient({super.key});
@@ -31,7 +31,6 @@ class _HomepatientState extends State<Homepatient> {
               username: 'username',
               time: DateTime.now(),
               userImage: 'image/PI.jpeg',
-              image: 'image/PI.jpeg',
             )
           ],
         ),

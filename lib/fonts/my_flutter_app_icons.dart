@@ -35,6 +35,8 @@ class MyFlutterApp {
       IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData noun_doctor_search_3862138 =
       IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData noun_volunteer_7187860 =
+      IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData noun_consultation_6696850 =
       IconData(0xe808, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData pencil =

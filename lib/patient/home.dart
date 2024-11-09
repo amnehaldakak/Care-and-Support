@@ -2,10 +2,10 @@
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:supcar/constent/color.dart';
-import 'package:supcar/doctorask.dart';
+import 'package:supcar/patient/doctorask.dart';
 import 'package:supcar/fonts/my_flutter_app_icons.dart';
-import 'package:supcar/patient.dart';
-import 'package:supcar/medicine.dart';
+import 'package:supcar/patient/patient.dart';
+import 'package:supcar/patient/medicine.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -24,18 +24,29 @@ class _HomepatientState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              MyFlutterApp.noun_doctor_search_3862138,
-              size: 50,
-              weight: 100,
-            )),
-        backgroundColor: pink,
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                MyFlutterApp.noun_doctor_search_3862138,
+                size: 50,
+                weight: 100,
+                color: pink,
+              )),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.volunteer_activism_outlined,
+                size: 35,
+                weight: 100,
+                color: pink,
+              )),
+        ],
+        backgroundColor: deepPurple,
         title: Text(
           nameWidget.elementAt(selectedIndex),
           style: TextStyle(
-            color: deepBlue,
+            color: pink,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -49,7 +60,8 @@ class _HomepatientState extends State<Home> {
           });
         },
         currentIndex: selectedIndex,
-        backgroundColor: pink,
+        backgroundColor: deepPurple,
+        unselectedItemColor: pink,
         items: [
           BottomNavigationBarItem(
               icon: Icon(
@@ -78,9 +90,9 @@ class _HomepatientState extends State<Home> {
               label: 'measure'),
         ],
         selectedFontSize: 20,
-        selectedItemColor: const Color.fromARGB(255, 58, 3, 67),
+        selectedItemColor: lightPink,
       ),
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: ListView(children: [
           ListTile(
             leading: Image.network(

@@ -18,11 +18,14 @@ class _AskState extends State<Ask> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: blue1,
-        child: Column(
+        color: deepPurple,
+        child: ListView(
           children: [
+            Container(
+              height: 40,
+            ),
             Form1(
-              max: 8,
+              max: 20,
               hint1: 'Write Your Consultation',
               mycontroller: content,
               valid: (val) {

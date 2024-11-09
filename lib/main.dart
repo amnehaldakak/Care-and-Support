@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:supcar/ask.dart';
+import 'package:supcar/patient/ask.dart';
 import 'package:supcar/content/form.dart';
 import 'package:supcar/doctor/addpost.dart';
 import 'package:supcar/doctor/doctorhome.dart';
-import 'package:supcar/home.dart';
-import 'package:supcar/patient.dart';
+import 'package:supcar/patient/home.dart';
+import 'package:supcar/patient/patient.dart';
 
 void main() {
   runApp(const MyApp());

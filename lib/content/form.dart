@@ -27,12 +27,12 @@ class Form1 extends StatelessWidget {
         controller: mycontroller,
         decoration: InputDecoration(
             hintText: hint1,
-            hintStyle: TextStyle(color: deepBlue),
+            hintStyle: TextStyle(color: deepPurple),
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
             border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              borderSide: BorderSide(color: deepBlue, width: 1),
+              borderSide: BorderSide(color: deepPurple, width: 1),
             )),
       ),
     );

@@ -8,13 +8,11 @@ class Post extends StatelessWidget {
     required this.username,
     required this.time,
     required this.userImage,
-    this.image,
   });
   final String messege;
   final String username;
   final DateTime time;
   final String userImage;
-  String? image;
 
   @override
   Widget build(BuildContext context) {
@@ -67,29 +65,11 @@ class Post extends StatelessWidget {
       ]);
     }
 
-    buildPostImage() {
-      return GestureDetector(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            image != null
-                ? Image.network(
-                    image!,
-                    width: MediaQuery.of(context).size.width,
-                    fit: BoxFit.cover,
-                  )
-                : Container()
-          ],
-        ),
-      );
-    }
-
     return Container(
       child: Column(
         children: [
           buildPostHeader(),
           buildPostFooter(),
-          buildPostImage(),
         ],
       ),
     );

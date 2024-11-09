@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supcar/constent/color.dart';
-import 'package:supcar/my_flutter_app_icons.dart';
+import 'package:supcar/fonts/my_flutter_app_icons.dart';
 
 class Medicine extends StatefulWidget {
   const Medicine({super.key});
@@ -28,7 +28,7 @@ class _MedicineState extends State<Medicine> {
           InkWell(
             onTap: () {},
             child: Card(
-              color: blue1,
+              color: lightPink,
               child: Container(
                 padding: EdgeInsets.only(left: 10, right: 10),
                 child: Column(
