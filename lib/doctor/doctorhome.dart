@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:supcar/constent/color.dart';
 import 'package:supcar/content/consultation.dart';
+import 'package:supcar/content/post.dart';
+import 'package:supcar/fonts/my_flutter_app_icons.dart';
+import 'package:supcar/patient/patient.dart';
 
 class Doctorhome extends StatefulWidget {
   const Doctorhome({super.key});
@@ -10,16 +14,23 @@ class Doctorhome extends StatefulWidget {
 
 class _DoctorhomeState extends State<Doctorhome> {
   int selectedIndex = 0;
-
+  List<Widget> listWidget = [Homepatient(), Consultation()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: pink,
-        title: Text('Doctor'),
+        backgroundColor: deepPurple,
+        title: Text(
+          'Doctor',
+          style: TextStyle(color: lightPink, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: pink,
+          backgroundColor: deepPurple,
+          selectedItemColor: lightPink,
+          unselectedItemColor: Colors.white,
+          iconSize: 35,
           onTap: (val) {
             setState(() {
               selectedIndex = val;
@@ -32,7 +43,8 @@ class _DoctorhomeState extends State<Doctorhome> {
               label: 'home',
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.message_outlined), label: 'messege')
+                icon: Icon(MyFlutterApp.noun_consultation_6696850),
+                label: 'consultation')
           ]),
       endDrawer: Drawer(
         child: ListView(children: [
@@ -57,6 +69,7 @@ class _DoctorhomeState extends State<Doctorhome> {
         ]),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: lightPink,
         onPressed: () {
           Navigator.of(context).pushNamed('addpost');
         },
@@ -64,7 +77,13 @@ class _DoctorhomeState extends State<Doctorhome> {
       ),
       body: Container(
         child: ListView(
-          children: [Container(child: Consultation())],
+          children: [
+            Post(
+                messege: 'messege',
+                username: 'username',
+                time: DateTime.now(),
+                userImage: 'image/PI.jpeg')
+          ],
         ),
       ),
     );

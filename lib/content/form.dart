@@ -20,7 +20,7 @@ class Form1 extends StatelessWidget {
           color: pink,
           border: Border.all(),
           borderRadius: BorderRadius.circular(10)),
-      margin: const EdgeInsets.all(20),
+      margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
       child: TextFormField(
         maxLines: max,
         validator: valid,
@@ -32,7 +32,9 @@ class Form1 extends StatelessWidget {
                 const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
             border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              borderSide: BorderSide(color: deepPurple, width: 1),
+              borderSide: BorderSide(
+                color: deepPurple,
+              ),
             )),
       ),
     );

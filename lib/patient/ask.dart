@@ -17,15 +17,19 @@ class _AskState extends State<Ask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Ask Doctor',
+          style: TextStyle(color: lightPink),
+        ),
+        backgroundColor: deepPurple,
+        centerTitle: true,
+      ),
       body: Container(
-        color: deepPurple,
         child: ListView(
           children: [
-            Container(
-              height: 40,
-            ),
             Form1(
-              max: 20,
+              max: 15,
               hint1: 'Write Your Consultation',
               mycontroller: content,
               valid: (val) {

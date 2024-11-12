@@ -7,14 +7,14 @@ import 'package:supcar/content/post.dart';
 import 'package:supcar/patient/doctorask.dart';
 import 'package:supcar/patient/medicine.dart';
 
-class Homepatient extends StatefulWidget {
-  const Homepatient({super.key});
+class Viewpostfordoctor extends StatefulWidget {
+  const Viewpostfordoctor({super.key});
 
   @override
-  State<Homepatient> createState() => _HomepatientState();
+  State<Viewpostfordoctor> createState() => _ViewpostfordoctorState();
 }
 
-class _HomepatientState extends State<Homepatient> {
+class _ViewpostfordoctorState extends State<Viewpostfordoctor> {
   String story =
       "One crisp morning, as the first snowflakes began to fall, the last golden leaf finally let go of its branch. It danced gracefully through the air, landing softly on the ground. Mr. Thompson watched from his window, a smile breaking through his somber expression. He understood now that while the leaf had fallen, it had not vanished; it had become part of the earth, nourishing the roots for new life to grow.";
 

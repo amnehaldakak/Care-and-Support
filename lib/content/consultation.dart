@@ -3,6 +3,7 @@ import 'package:supcar/constent/color.dart';
 import 'package:supcar/content/form.dart';
 import 'package:supcar/content/post.dart';
 import 'package:supcar/content/valid.dart';
+import 'package:supcar/fonts/my_flutter_app_icons.dart';
 
 class Consultation extends StatelessWidget {
   Consultation({super.key});
@@ -35,26 +36,28 @@ class Consultation extends StatelessWidget {
       );
     }
 
-    return Container(
-        padding: EdgeInsets.all(10),
-        margin: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            border: Border.all(color: deepPurple),
-            borderRadius: BorderRadius.circular(10)),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Post(
-                messege: 'messege',
-                username: 'username',
-                time: DateTime.now(),
-                userImage: 'image/PI.jpeg'),
-            IconButton(
-                onPressed: () {
-                  showDialogConsulation();
-                },
-                icon: Icon(Icons.comment))
-          ],
-        ));
+    return Scaffold(
+      body: Container(
+          padding: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              border: Border.all(color: deepPurple),
+              borderRadius: BorderRadius.circular(10)),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Post(
+                  messege: 'messege',
+                  username: 'username',
+                  time: DateTime.now(),
+                  userImage: 'image/PI.jpeg'),
+              IconButton(
+                  onPressed: () {
+                    showDialogConsulation();
+                  },
+                  icon: Icon(MyFlutterApp.comment_empty)),
+            ],
+          )),
+    );
   }
 }
